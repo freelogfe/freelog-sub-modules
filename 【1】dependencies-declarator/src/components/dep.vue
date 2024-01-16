@@ -67,7 +67,10 @@
           <template v-else-if="props.data.activeContracts.length">
             <div
               class="policy"
-              :class="{ active: item.status === 0 && item.authStatus === 1, uncompleted: item.authStatus === 128 }"
+              :class="{
+                active: item.status === 0 && [1, 3].includes(item.authStatus),
+                uncompleted: item.authStatus === 128,
+              }"
               v-for="item in props.data.activeContracts"
               :key="item.contractId"
             >

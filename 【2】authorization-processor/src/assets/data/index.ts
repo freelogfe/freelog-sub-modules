@@ -11,6 +11,6 @@ export const DEFAULT_COVER = `${getDomain("static")}/static/default_cover.png`;
 export const AUTH_STATUS_MAPPING = {
   1: "contract_state_authorized",
   2: "contract_state_testauthorized",
-  4: "contract_state_authorized",
+  3: "contract_state_authorized",
   128: "contract_state_unauthorized",
 };

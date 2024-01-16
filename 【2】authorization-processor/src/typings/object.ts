@@ -2,7 +2,6 @@
  * 普通对象类型接口
  */
 
-import { UploadRawFile } from "element-plus";
 import { AuthStatus, FsmRunningStatus } from "./type";
 
 /** i18n */
