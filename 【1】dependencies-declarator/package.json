@@ -1,0 +1,38 @@
+{
+  "name": "dependencies-declarator",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:test": "vue-cli-service build --mode test"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "core-js": "^3.6.5",
+    "qiankun": "^2.10.3",
+    "element-plus": "^2.3.9",
+    "pinia": "^2.1.6",
+    "semver": "^7.5.4",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0",
+    "vue3-lazy": "^1.0.0-alpha.1"
+  },
+  "devDependencies": {
+    "@types/semver": "^7.5.3",
+    "@vue/cli-plugin-babel": "~4.5.15",
+    "@vue/cli-plugin-router": "~4.5.15",
+    "@vue/cli-plugin-typescript": "~4.5.15",
+    "@vue/cli-plugin-vuex": "~4.5.15",
+    "@vue/cli-service": "~4.5.15",
+    "@vue/compiler-sfc": "^3.0.0",
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.4",
+    "typescript": "~4.1.5"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

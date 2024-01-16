@@ -1,0 +1,74 @@
+#app {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Microsoft Yahei, Roboto, Oxygen, Ubuntu, Cantarell,
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  color: #222;
+  text-align: left;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #fff;
+}
+
+img {
+  display: block;
+}
+
+input {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0;
+
+  &:focus {
+    border: none;
+    box-shadow: none;
+  }
+
+  &::-webkit-input-placeholder {
+    color: #ccc;
+  }
+}
+
+.freelog {
+  line-height: 1;
+}
+
+.el-drawer__body {
+  padding: 0;
+}
+
+.el-message {
+  z-index: 9999 !important;
+}
+
+.el-select__popper {
+  z-index: 3001 !important;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* slide-down-fade */
+.slide-down-fade-enter-active,
+.slide-down-fade-leave-active {
+  transition: all 0.2s ease;
+}
+.slide-down-fade-enter-from,
+.slide-down-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+}
