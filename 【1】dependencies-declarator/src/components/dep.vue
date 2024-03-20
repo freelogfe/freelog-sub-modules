@@ -8,7 +8,11 @@
         <div class="dep-info">
           <div class="dep-name" :title="props.data.resourceName">{{ props.data.resourceName }}</div>
           <div class="dep-other" v-if="props.data.depType === 'resource'">
-            <div class="type">{{ props.data.resourceType.join(" / ") }}</div>
+            <div class="author-info">
+              <img class="avatar" :src="`https://image.freelog.com/avatar/${props.data.userId}`" />
+              <span>{{ props.data.username }}</span>
+            </div>
+            <div class="type">｜{{ props.data.resourceType.join(" / ") }}</div>
             <template v-if="store.config.versionRangeShow && !props.sub && props.data.status !== 0">
               <div class="version">｜{{ I18n("claim_rely_version_rage") }}：{{ props.data.versionRange }}</div>
               <div class="version-range" @click.stop v-if="store.config.updateVersionRange">
@@ -239,17 +243,31 @@ const confirmVersion = () => {
           align-items: center;
           margin-left: 50px;
 
+          .author-info {
+            font-size: 12px;
+            color: #999999;
+            display: flex;
+            align-items: center;
+            
+            .avatar {
+              width: 20px;
+              height: 20px;
+              border: 1px solid #e5e7eb;
+              border-radius: 50%;
+              box-sizing: border-box;
+              margin-right: 5px;
+            }
+          }
+
           .type {
             font-size: 12px;
             color: #999999;
-            line-height: 18px;
           }
 
           .version {
             position: relative;
             font-size: 12px;
             color: #999999;
-            line-height: 18px;
           }
 
           .version-range {

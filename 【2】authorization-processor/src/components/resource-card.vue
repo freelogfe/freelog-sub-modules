@@ -12,8 +12,10 @@
       <div class="info">
         <div class="name" :title="props.data.resourceName">{{ props.data.resourceName }}</div>
         <div class="other" v-if="props.data.error !== 'object'">
-          <span>{{ props.data.resourceType.join(" / ") }}</span>
-          <span>｜{{ formatDate(props.data.updateDate, "YYYY-MM-DD hh:mm") }} </span>
+          <img class="avatar" :src="`https://image.freelog.com/avatar/${props.data.userId}`" />
+          <span>{{ props.data.username }}</span>
+          <span>｜{{ props.data.resourceType.join(" / ") }}</span>
+          <span>｜{{ formatDate(props.data.updateDate, "YYYY-MM-DD hh:mm") }}</span>
         </div>
       </div>
 
@@ -193,7 +195,17 @@ const viewTerminateContract = () => {
       .other {
         font-size: 12px;
         color: #999999;
-        line-height: 18px;
+        display: flex;
+        align-items: center;
+
+        .avatar {
+          width: 20px;
+          height: 20px;
+          border: 1px solid #e5e7eb;
+          border-radius: 50%;
+          box-sizing: border-box;
+          margin-right: 5px;
+        }
       }
     }
 
